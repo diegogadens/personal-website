@@ -8,10 +8,11 @@ header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
 
 $admin_email = 'diegogadens@gmail.com'; // Your Email
+$website_from_email = 'contato@diegogadens.com';
 $message_min_length = 1; // Min Message Length
 
 	class Contact_Form{
-		function __construct($details, $email_admin, $message_min_length, $phone_min_length){
+		function __construct($details, $email_admin, $website_from_email, $message_min_length, $phone_min_length){
 
 			$this->name = stripslashes($details['name']);
 			$this->email = trim($details['email']);
@@ -20,6 +21,7 @@ $message_min_length = 1; // Min Message Length
 			$this->message = stripslashes($details['message']);
 			$this->messageExtras = "";
 			$this->email_admin = $email_admin;
+			$this->website_from_email = $website_from_email;
 			$this->message_min_length = $message_min_length;
 
 			$this->response_status = 1;
@@ -77,10 +79,14 @@ $message_min_length = 1; // Min Message Length
 		}
 
 		private function sendEmail(){
+
+			$from_add = "name@your-web-site.com";
+
 			$mail = mail($this->email_admin, $this->subject, $this->message,
-				 "From: Contato no site <contato@diegogadens.com>\r\n"
+				 "From: " . $this->website_from_email . "\r\n"
 				."Reply-To: ".$this->email."\r\n"
 				."X-Mailer: PHP/" . phpversion(). "\r\n"
+				."Return-Path: " . $this->website_from_email . "\r\n"
 				."Content-Type: text/html; charset=ISO-8859-1\r\n");
 
 			if($mail)
@@ -107,7 +113,7 @@ $message_min_length = 1; // Min Message Length
 
 	}
 
-	$contact_form = new Contact_Form($_REQUEST, $admin_email, $message_min_length, $phone_min_length);
+	$contact_form = new Contact_Form($_REQUEST, $admin_email, $website_from_email, $message_min_length, $phone_min_length);
 	$contact_form->sendRequest();
 
 ?>

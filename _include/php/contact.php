@@ -78,7 +78,7 @@ $message_min_length = 1; // Min Message Length
 
 		private function sendEmail(){
 			$mail = mail($this->email_admin, $this->subject, $this->message,
-				 "From: ".$this->name." <".$this->email.">\r\n"
+				 "From: Contato no site <contato@diegogadens.com>\r\n"
 				."Reply-To: ".$this->email."\r\n"
 				."X-Mailer: PHP/" . phpversion(). "\r\n"
 				."Content-Type: text/html; charset=ISO-8859-1\r\n");

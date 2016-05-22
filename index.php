@@ -11,14 +11,14 @@
 <!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>Diego Gadens</title>   
+<title>Diego Gadens</title>
 
-<meta name="description" content="Diego Gadens - Mestre em Engenharia da Computação pela Universidade Presbiteriana Mackenzie de São Paulo/SP - Programador Web & Mobile - Engenheiro de Software - Professor" /> 
+<meta name="description" content="Diego Gadens - Mestre em Engenharia da Computação pela Universidade Presbiteriana Mackenzie de São Paulo/SP - Programador Web & Mobile - Engenheiro de Software - Professor" />
 
 <!-- Mobile Specifics -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="HandheldFriendly" content="true"/>
-<meta name="MobileOptimized" content="320"/>   
+<meta name="MobileOptimized" content="320"/>
 
 <!--Open Graph tags-->
 <meta property="og:title" content="Diego Gadens" />
@@ -75,7 +75,7 @@
 
 <!-- Budget Selector -->
 <script>
-    
+
     function contactOptionsSelector(option){
         switch (option){
             case 'open':
@@ -88,10 +88,8 @@
                 document.getElementById('detalhes_orcamento').style.display = 'none';
                 break;
         }
-
-        //alert('oi');
     }
-    
+
 </script>
 
 
@@ -120,7 +118,7 @@
     "http://www.facebook.com/diegogadens",
     "http://www.linkedin.com/in/diegogadens",
     "http://instagram.com/diegogadens",
-    "http://twitter.com/dgadens",
+    "http://twitter.com/diegogadens",
     "http://www.youtube.com/user/diegogadens",
     "http://plus.google.com/+DiegoGadens"
   ]
@@ -142,18 +140,18 @@
 <!-- End of Splash Screen -->
 
 <!-- Homepage Slider -->
-<div id="home-slider">	
+<div id="home-slider">
     <div class="overlay"></div>
 
     <div class="slider-text">
     	<div id="slidecaption"></div>
-    </div>   
-	
+    </div>
+
 	<div class="control-nav">
         <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
         <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
         <ul id="slide-list"></ul>
-        
+
         <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
     </div>
 </div>
@@ -163,11 +161,11 @@
 <header>
     <div class="sticky-nav">
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
-        
+
         <div id="logo">
         	<a id="goUp" href="#home-slider" title="Diego Gadens | Desenvolvedor Web & Mobile | Engenheiro de Software | Professor">Diego Gadens</a>
         </div>
-        
+
         <nav id="menu">
         	<ul id="menu-nav">
             	<li class="current"><a href="#home-slider">Início</a></li>
@@ -176,7 +174,7 @@
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
-        
+
     </div>
 </header>
 <!-- End Header -->
@@ -194,7 +192,7 @@
             </div>
         </div>
         <!-- End Title Page -->
-        
+
         <!-- Portfolio Projects -->
         <div class="row">
         	<div class="span3">
@@ -211,12 +209,12 @@
                 </nav>
                 <!-- End Filter -->
             </div>
-            
+
             <div class="span9">
             	<div class="row">
                 	<section id="projects">
                     	<ul id="thumbs">
-                        
+
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 webAndMobile">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
@@ -224,12 +222,12 @@
                                 	<span class="overlay-img"></span>
                                     <span class="overlay-img-thumb font-icon-plus"></span>
                                 </a>
-                                
+
                                 <!-- Thumb Image and Description -->
                                 <img src="_include/img/work/thumbs/wego.jpg" alt="Tecnologias: Node.js, Sails.js, Angular.js, Ember.js, Javascript, MongoDB, Java, Swift.">
                             </li>
                         	<!-- End Item Project -->
-                            
+
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 webAndMobile">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
@@ -241,7 +239,7 @@
                                 <img src="_include/img/work/thumbs/bigesquentagame.jpg" alt="Tecnologias: PHP, MySQL, HTML, CSS, Javascript, Java, Objective-C, Flash.">
                             </li>
                         	<!-- End Item Project -->
-                            
+
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 webOnly">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
@@ -253,7 +251,7 @@
                                 <img src="_include/img/work/thumbs/aecio.jpg" alt="Tecnologias: PHP, MySQL, HTML, CSS, Javascript, Angular.js.">
                             </li>
                         	<!-- End Item Project -->
-                            
+
 							<!-- Item Project and Filter Name -->
                             <li class="item-thumbs span3 webOnly">
                                 <!-- Fancybox - Gallery Enabled - Title - Full Image -->
@@ -265,7 +263,7 @@
                                 <img src="_include/img/work/thumbs/dietagourmet.jpg" alt="Tecnologias: PHP, MySQL, HTML, CSS, Javascript, API PagSeguro.">
                             </li>
                             <!-- End Item Project -->
-                            
+
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 webOnly">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
@@ -289,7 +287,7 @@
                                 <img src="_include/img/work/thumbs/bigesquentatelao.jpg" alt="Tecnologias: PHP, MySQL, HTML, CSS, Javascript, APIs Instagram e Facebook.">
                             </li>
                             <!-- End Item Project -->
-                            
+
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 mobileOnly">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
@@ -301,7 +299,7 @@
                                 <img src="_include/img/work/thumbs/greenpeace.jpg" alt="Tecnologias: PHP, MySQL, HTML, CSS, Javascript, Java, Objective-C.">
                             </li>
                         	<!-- End Item Project -->
-                            
+
 							<!-- Item Project and Filter Name -->
                         	<li class="item-thumbs span3 mobileOnly">
                             	<!-- Fancybox - Gallery Enabled - Title - Full Image -->
@@ -398,7 +396,7 @@
                             </li>
                             <!-- End Item Project -->
                         </ul>
-                    </section>                   
+                    </section>
             	</div>
             </div>
         </div>
@@ -415,18 +413,18 @@
         <div class="span12">
             <div class="title-page">
                 <h2 class="title">Um pouco sobre mim</h2>
-                
-                <h3 class="title-description">Veja meu currículo em detalhes no <a href="https://www.linkedin.com/profile/view?id=AAIAAAHtFkoB55q9q8cGj5Fi3ckLO5DNZECa0As" target="_blank">Linked-in</a>, <br> ou <a href="_include/docs/Curriculum_Vitae.pdf" target="_blank" type="application/pdf" download>clique aqui</a> para baixar meu Currículum Vitae</h3>
+
+                <h3 class="title-description">Veja meu currículo em detalhes no <a href="https://www.linkedin.com/profile/view?id=AAIAAAHtFkoB55q9q8cGj5Fi3ckLO5DNZECa0As" target="_blank">Linked-in</a></h3>
 
 
             </div>
         </div>
     </div>
     <!-- End Title Page -->
-    
+
     <!-- People -->
     <div class="row">
-    	
+
         <!-- Start Profile -->
     	<div class="span4 profile">
         	<div class="image-wrap">
@@ -439,10 +437,10 @@
                 <img src="_include/img/profile/profile-01.jpg" alt="Experiência de mais de 6 anos em desenvolvimento Web & Mobile">
             </div>
             <h3 class="profile-name">Programador Web & Mobile</h3>
-            <p class="profile-description">Desde 2009 tenho trabalhado com projetos de software que tem a <a href="https://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_em_nuvem" target="_blank">nuvem </a> como principal plataforma de distribuição. Tenho grande exeriência em programação <span class="italic">Java</span> e <span class="italic">PHP</span>, mas mais recentemente o principal mix de tecnologias que utilizo contém <span class="italic">HTML, CSS</span> e <span class="italic">Javascript</span>. Dentre os principais frameworks e bibliotecas que tenho trabalhado/estudado estão: <span class="italic"><a href="https://jquery.com/" target="_blank">jQuery</a></span>, <span class="italic"><a href="https://nodejs.org/" target="_blank">Node.js</a></span>, <span class="italic"><a href="http://sailsjs.org/" target="_blank">Sails.js</a></span>, <span class="italic"><a href="https://angularjs.org/" target="_blank">Angular.js</a></span>, <span class="italic"><a href="http://emberjs.com/" target="_blank">Ember.js</a></span>. No âmbito do mobile, todas as tecnologias já citadas são também utilizadas para a construção de aplicativos híbridos (que contemplam Android, iOS, Windows Phone, etc, de uma só vez). Já no desenvolvimento específico para cada plataforma, o chamado desenvolvimento nativo, o foco das tecnologias fica em <span class="italic"><a href="https://developer.android.com/develop/index.html" target="_blank">Java</a></span> para o Android e <span class="italic"><a href="http://www.apple.com/swift/" target="_blank">Swift</a></span> para o iOS (iPhone).</p>
+            <p class="profile-description">Desde 2009 tenho trabalhado com projetos de software que tem a <a href="https://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_em_nuvem" target="_blank">nuvem </a> como principal plataforma de distribuição. Tenho grande exeriência em programação <span class="italic">Java</span> e <span class="italic">PHP</span>, mas mais recentemente o principal mix de tecnologias que utilizo contém <span class="italic">HTML, CSS</span> e <span class="italic">Javascript</span>. Dentre os principais frameworks e bibliotecas que tenho trabalhado/estudado estão: <span class="italic"><a href="https://jquery.com/" target="_blank">jQuery</a></span>, <span class="italic"><a href="https://nodejs.org/" target="_blank">Node.js</a></span>, <span class="italic"><a href="http://sailsjs.org/" target="_blank">Sails.js</a></span>, <span class="italic"><a href="https://angularjs.org/" target="_blank">Angular.js</a></span>, <span class="italic"><a href="http://emberjs.com/" target="_blank">Ember.js</a></span>. No âmbito do mobile, todas as tecnologias já citadas são também utilizadas para a construção de aplicativos híbridos (que contemplam Android, iOS, Windows Phone, etc, de uma só vez). Já no desenvolvimento específico para cada plataforma, o chamado desenvolvimento nativo, o foco das tecnologias fica em <span class="italic"><a href="https://developer.android.com/develop/index.html" target="_blank">Java</a></span> para o Android e <span class="italic"><a href="http://www.apple.com/swift/" target="_blank">Swift</a></span> para o iOS (iPhone). Atualmente vivo em Sydney-Australia, onde trabalho como desenvolvedor back-end com Node.js na <a href='https://www.tab.com.au/' target='_blank'>Tabcorp</a></p>
         </div>
         <!-- End Profile -->
-        
+
         <!-- Start Profile -->
     	<div class="span4 profile">
         	<div class="image-wrap">
@@ -462,7 +460,7 @@
             <p class="profile-description">Nos <a href="http://diegogadens.com/#work">diversos trabalhos</a> que realizei ao longo de minha carreira, tive a oportunidade de atuar em todas as etapas do desenvolvimento de software, partindo dos primeiros passos, que incluem a análise, o mapeamento e a especificação de requisitos, passando pela arquitetura e modelagem do software bem como da infraestrutura necessária para sua execução. Por último, mas não menos importante, pude vivenciar diversas vezes o lançamento de produtos, entregas finais ao cliente, além de acompanhamento, suporte e manutenção nos períodos pós-venda. No decorrer destes trabalhos, tive também a oportunidade de atuar no gerenciamento dos projetos e na liderança de equipes multifuncionais, com programadores, DBAs, designers, entre outros.</p>
         </div>
         <!-- End Profile -->
-        
+
         <!-- Start Profile -->
     	<div class="span4 profile">
         	<div class="image-wrap">
@@ -475,10 +473,10 @@
                 <img src="_include/img/profile/profile-03.jpg" alt="Experiência de quase 2 anos como professor universitário">
             </div>
             <h3 class="profile-name">Professor M.Sc.</h3>
-            <p class="profile-description">Concluí no ano de 2012 o meu Mestrado em Engenharia Elétrica, com ênfase em Engenharia da Computação na <a href="http://up.mackenzie.br/upm" target="_blank"> Universidade Presbiteriana Mackênzie</a> em São Paulo - SP. Durante o Mestrado, minha linha de pesquisa foi a <a href="https://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_natural" target="_blank">Computação Natural</a>, a qual forneceu a base para o desenvolvimento de um algoritmo de vida artificial baseado no modelo de <span class="italic"><a href="https://en.wikipedia.org/wiki/Boids" target="_blank">Boids</a></span> para agrupamento de dados em ambientes dinâmicos. Sempre tive um grande apreço pela área acadêmica e desde abril de 2014 leciono no curso de graduação em Sistemas de Informação na <a href="http://www.unisep.edu.br" target="_blank">Unisep</a> em Dois Vizinhos - PR, cidade na qual resido atualmente. As minhas áreas de interesse incluem Algoritmos e Lógica de Programação, Teoria da Computação, Inteligência Artificial e suas derivadas.</p>
+            <p class="profile-description">Concluí no ano de 2012 o meu Mestrado em Engenharia Elétrica, com ênfase em Engenharia da Computação na <a href="http://up.mackenzie.br/upm" target="_blank"> Universidade Presbiteriana Mackênzie</a> em São Paulo - SP. Durante o Mestrado, minha linha de pesquisa foi a <a href="https://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_natural" target="_blank">Computação Natural</a>, a qual forneceu a base para o desenvolvimento de um algoritmo de vida artificial baseado no modelo de <span class="italic"><a href="https://en.wikipedia.org/wiki/Boids" target="_blank">Boids</a></span> para agrupamento de dados em ambientes dinâmicos. Sempre tive um grande apreço pela área acadêmica e lecionei entre os anos de 2014 e 2015 no curso de graduação em Sistemas de Informação na <a href="http://www.unisep.edu.br" target="_blank">Unisep</a> em Dois Vizinhos - PR. Parei de lecionar temporariamente apenas porque no final do ano de 2015 recebi uma proposta de emprego de uma empresa australiana, e desde então resido em Sydney-Austrália. As minhas áreas de interesse incluem Algoritmos e Lógica de Programação, Teoria da Computação, Inteligência Artificial e suas derivadas.</p>
         </div>
         <!-- End Profile -->
-        
+
     </div>
     <!-- End People -->
 </div>
@@ -494,16 +492,16 @@
         <div class="span12">
             <div class="title-page">
                 <h2 class="title">Contato</h2>
-                <h3 class="title-description">Tem uma ideia e precisa de um desenvolvedor? Fale comigo e eu posso te ajudar a tirá-la do papel</h3>
+                <h3 class="title-description">Deseja algo que não encontrou no meu site? Entre em contato utilizando o formulário abaixo</h3>
             </div>
         </div>
     </div>
     <!-- End Title Page -->
-    
+
     <!-- Contact Form -->
     <div class="row">
     	<div class="span9">
-        
+
         	<form id="contact-form" class="contact-form" action="#" novalidate>
             	<p class="contact-name">
             		<input id="contact_name" type="text" placeholder="Nome" value="" name="name" />
@@ -514,72 +512,33 @@
                 <p class="contact-phone">
                     <input id="contact_phone" type="text" placeholder="DDD - Telefone" value="" name="phone" />
                 </p>
-                
-                    <div class="orcamento">
-                        O que você precisa?<br>
-                        <input id="contact_only" type="radio" name="contact_type" value="contato" onclick="contactOptionsSelector('close')"> Apenas contato<br>
-                        <input id="estimate_cost" type="radio" name="contact_type" value="orcamento" onclick="contactOptionsSelector('open')"> Preciso de um orçamento<br>
-                    </div>
-                
-                <p>
-                    <div class="orcamento" id="detalhes_orcamento" style="display:none;">
-                        Qual(is) as plataformas desejadas?<br>
-                        <input id="sw_type_hybrid" type="checkbox" name="software_type[]" value="hybrid"> Mobile híbrido
-                        <input id="sw_type_android" type="checkbox" name="software_type[]" value="android"> Android nativo
-                        <input id="sw_type_ios" type="checkbox" name="software_type[]" value="ios"> iPhone nativo
-                        <input id="sw_type_web" type="checkbox" name="software_type[]" value="web"> Web 
-                        <input id="sw_type_others" type="checkbox" name="software_type[]" value="outros"> Outros <br>
-                        <hr>
-
-                        Haverá integração com outros serviços?<br>
-                        <input id="integr_fb" type="checkbox" name="integrations[]" value="facebook"> Facebook
-                        <input id="integr_insta" type="checkbox" name="integrations[]" value="instagram"> Instagram
-                        <input id="integr_google" type="checkbox" name="integrations[]" value="google"> Google
-                        <input id="integr_gmaps" type="checkbox" name="integrations[]" value="gmaps"> Google Maps
-                        <input id="integr_tt" type="checkbox" name="integrations[]" value="twitter"> Twitter
-                        <input id="integr_linkedin" type="checkbox" name="integrations[]" value="linkedin"> Linkedin
-                        <input id="integr_others" type="checkbox" name="integrations[]" value="outros"> Outros<br>
-                        <hr>
-
-                        Que faixa de valores você pretende investir?<br>
-                        <input id="budget1" type="radio" name="budget" value="budget1"> R$ 1.000,00 a R$ 5.000,00
-                        <input id="budget2" type="radio" name="budget" value="budget2"> R$ 5.000,00 a R$ 15.000,00
-                        <input id="budget3" type="radio" name="budget" value="budget3"> R$ 15.000,00 a R$ 30.000,00
-                        <input id="budget4" type="radio" name="budget" value="budget4"> R$ 30.000,00 a R$ 50.000,00
-                        <input id="budget5" type="radio" name="budget" value="budget5"> Mais de R$ 50.000,00
-                    </div>
-                </p>
-
-                
-
-
                 <p class="contact-message">
                 	<textarea id="contact_message" placeholder="Sua mensagem" name="message" rows="15" cols="40"></textarea>
                 </p>
                 <p class="contact-submit">
                 	<a id="contact-submit" class="submit" href="#">Enviar mensagem</a>
                 </p>
-                
+
                 <div id="response">
-                
+
                 </div>
             </form>
-         
+
         </div>
-        
+
         <div class="span3">
         	<div class="contact-details">
         		<h3>Detalhes de contato</h3>
                 <ul>
                     <li><a href="#">diegogadens@gmail.com</a></li>
-                    <li>Whatsapp/celular: (46) 8806-7337</li>
+                    <li>Whatsapp/celular: +61 0426 070 505</li>
                     <li>Skype: diegogadens</li>
                     <li>
                         Diego Gadens
                         <br>
-                        Dois Vizinhos, PR
+                        Sydney, NSW
                         <br>
-                        Brasil
+                        Austrália
                     </li>
                 </ul>
             </div>
@@ -599,7 +558,7 @@
                     <ul>
                         <li><a href="http://www.linkedin.com/in/diegogadens" title="Siga-me no LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
                         <li><a href="https://www.facebook.com/diegogadens" title="Siga-me no Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
-                        <li><a href="https://twitter.com/dgadens" title="Siga-me no Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
+                        <li><a href="https://twitter.com/diegogadens" title="Siga-me no Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
                         <li><a href="http://www.behance.net/diego_gadens" title="Siga-me no Behance" target="_blank"><span class="font-icon-social-behance"></span></a></li>
                         <li><a href="https://plus.google.com/+DiegoGadens" rel=me title="Siga-me Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
                     </ul>
@@ -612,7 +571,7 @@
 
 <!-- Footer -->
 <footer>
-	<p class="credits">&copy;2015 Diego Gadens.</p>
+	<p class="credits">&copy;2016 Diego Gadens.</p>
 </footer>
 <!-- End Footer -->
 

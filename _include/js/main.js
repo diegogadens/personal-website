@@ -9,7 +9,7 @@ var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 
 BRUSHED.mobileNav = function(){
 	var windowWidth = $(window).width();
-	
+
 	if( windowWidth <= 979 ) {
 		if( $('#mobile-nav').length > 0 ) {
 			mobileMenuClone.insertAfter('#menu');
@@ -18,7 +18,7 @@ BRUSHED.mobileNav = function(){
 	} else {
 		$('#navigation-mobile').css('display', 'none');
 		if ($('#mobile-nav').hasClass('open')) {
-			$('#mobile-nav').removeClass('open');	
+			$('#mobile-nav').removeClass('open');
 		}
 	}
 }
@@ -26,7 +26,7 @@ BRUSHED.mobileNav = function(){
 BRUSHED.listenerMenu = function(){
 	$('#mobile-nav').on('click', function(e){
 		$(this).toggleClass('open');
-		
+
 		if ($('#mobile-nav').hasClass('open')) {
 			$('#navigation-mobile').slideDown(500, 'easeOutExpo');
 		} else {
@@ -34,7 +34,7 @@ BRUSHED.listenerMenu = function(){
 		}
 		e.preventDefault();
 	});
-	
+
 	$('#menu-nav-mobile a').on('click', function(){
 		$('#mobile-nav').removeClass('open');
 		$('#navigation-mobile').slideUp(350, 'easeOutExpo');
@@ -62,8 +62,8 @@ BRUSHED.slider = function(){
 		keyboard_nav            :   1,			// Keyboard navigation on/off
 		performance				:	1,			// 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
 		image_protect			:	1,			// Disables image dragging and right click with Javascript
-												   
-		// Size & Position						   
+
+		// Size & Position
 		min_width		        :   0,			// Min width allowed (in pixels)
 		min_height		        :   0,			// Min height allowed (in pixels)
 		vertical_center         :   1,			// Vertically center background
@@ -71,8 +71,8 @@ BRUSHED.slider = function(){
 		fit_always				:	0,			// Image will never exceed browser width or height (Ignores min. dimensions)
 		fit_portrait         	:   1,			// Portrait images will not exceed browser height
 		fit_landscape			:   0,			// Landscape images will not exceed browser width
-												   
-		// Components							
+
+		// Components
 		slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
@@ -82,11 +82,11 @@ BRUSHED.slider = function(){
 											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content">Professor</div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content">Engenheiro de Software</div>', thumb : '', url : ''}
 									],
-									
-		// Theme Options			   
-		progress_bar			:	0,			// Timer for each slide							
+
+		// Theme Options
+		progress_bar			:	0,			// Timer for each slide
 		mouse_scrub				:	0
-		
+
 	});
 
 }
@@ -106,9 +106,9 @@ BRUSHED.nav = function(){
 ================================================== */
 
 BRUSHED.filter = function (){
-	if($('#projects').length > 0){		
+	if($('#projects').length > 0){
 		var $container = $('#projects');
-		
+
 		$container.imagesLoaded(function() {
 			$container.isotope({
 			  // options
@@ -117,12 +117,12 @@ BRUSHED.filter = function (){
 			  layoutMode : 'fitRows'
 			});
 		});
-	
-		
+
+
 		// filter items when filter link is clicked
 		var $optionSets = $('#options .option-set'),
 			$optionLinks = $optionSets.find('a');
-	
+
 		  $optionLinks.click(function(){
 			var $this = $(this);
 			// don't proceed if already selected
@@ -132,7 +132,7 @@ BRUSHED.filter = function (){
 			var $optionSet = $this.parents('.option-set');
 			$optionSet.find('.selected').removeClass('selected');
 			$this.addClass('selected');
-	  
+
 			// make option object dynamically, i.e. { filter: '.my-filter-class' }
 			var options = {},
 				key = $optionSet.attr('data-option-key'),
@@ -147,7 +147,7 @@ BRUSHED.filter = function (){
 			  // otherwise, apply new options
 			  $container.isotope( options );
 			}
-			
+
 			return false;
 		});
 	}
@@ -160,8 +160,8 @@ BRUSHED.filter = function (){
 
 BRUSHED.fancyBox = function(){
 	if($('.fancybox').length > 0 || $('.fancybox-media').length > 0 || $('.fancybox-various').length > 0){
-		
-		$(".fancybox").fancybox({				
+
+		$(".fancybox").fancybox({
 				padding : 0,
 				beforeShow: function () {
 					this.title = $(this.element).attr('title');
@@ -171,7 +171,7 @@ BRUSHED.fancyBox = function(){
 					title : { type: 'inside' },
 				}
 			});
-			
+
 		$('.fancybox-media').fancybox({
 			openEffect  : 'none',
 			closeEffect : 'none',
@@ -196,93 +196,14 @@ function isChecked(id){
 BRUSHED.contactForm = function(){
 	$("#contact-submit").on('click',function() {
 		$contact_form = $('#contact-form');
-		
-		var name = $('input[name=name]').val();
+
+			var name = $('input[name=name]').val();
     	var email = $('input[name=email]').val();
     	var phone = $('input[name=phone]').val();
     	var message = $('textarea[name=message]').val();
 
-	   	if(document.getElementById("contact_only").checked){
-    		var contact_type = "contato";
-    	}
-    	else
-    	if(document.getElementById("estimate_cost").checked){
-    		var contact_type = "orcamento";
-
-
-    		//builds the software_type[] Array query param
-    		var software_type = "";
-
-    		if (isChecked("sw_type_hybrid"))
-    			software_type += "&software_type[]=hybrid";
-
-    		if (isChecked("sw_type_android"))
-    			software_type += "&software_type[]=android";
-
-    		if (isChecked("sw_type_ios"))
-    			software_type += "&software_type[]=ios";
-
-    		if (isChecked("sw_type_web"))
-    			software_type += "&software_type[]=web";
-
-    		if (isChecked("sw_type_others"))
-    			software_type += "&software_type[]=outros";
-
-    		
-    		
-    		//builds the integrations[] Array query param
-    		var integrations = ""
-
-    		if (isChecked("integr_fb"))
-    			integrations += "&integrations[]=facebook";
-
-    		if (isChecked("integr_insta"))
-    			integrations += "&integrations[]=instagram";
-
-    		if (isChecked("integr_google"))
-    			integrations += "&integrations[]=google";
-
-    		if (isChecked("integr_gmaps"))
-    			integrations += "&integrations[]=gmaps";
-
-    		if (isChecked("integr_tt"))
-    			integrations += "&integrations[]=twitter";
-
-    		if (isChecked("integr_linkedin"))
-    			integrations += "&integrations[]=linkedin";
-
-    		if (isChecked("integr_others"))
-    			integrations += "&integrations[]=outros";
-
-
-
-    		//builds the budget[] query param
-    		var budget = "";
-
-    		for (var i=1; i<=5; i++)
-    			if (isChecked("budget" + i))
-    				budget += "&budget=budget" + i;
-
-    	}
-    	else{
-    		var contact_type = "";
-    	}
-
-    	//Build the mandatory parameters query string
-    	var fields = "name="+name+"&email="+email+"&phone="+phone+"&contact_type="+contact_type+"&message="+message;
-
-    	
-    	//build the optional extra parameters in the query string if the user has checked them
-    	if(contact_type == "orcamento"){
-	    	if(software_type != "")
-	    		fields += software_type;
-
-	    	if(integrations != "")
-	    		fields += integrations;
-
-	    	if(budget != "")
-	    		fields += budget;
-	    }
+    	//Build the parameters query string
+    	var fields = "name="+name+"&email="+email+"&phone="+phone+"&message="+message;
 
     	$.ajax({
 			type: "POST",
@@ -290,16 +211,14 @@ BRUSHED.contactForm = function(){
 			data: fields,
 			dataType: 'json',
 			success: function(response) {
-				
+
 				if(response.status){
 					$('#contact-form input').val('');
 					$('#contact-form textarea').val('');
-					$("#contact-form input:radio").removeAttr("checked");
-					$("#contact-form input:checkbox").removeAttr("checked");
 
 					alert('Muito obrigado. Entrarei em contato em breve.')
 				}
-				
+
 				$('#response').empty().html(response.html);
 			}
 		});
@@ -312,9 +231,9 @@ BRUSHED.contactForm = function(){
 ================================================== */
 
 BRUSHED.tweetFeed = function(){
-	
+
 	var valueTop = -64; // Margin Top Value
-	
+
     $("#ticker").tweet({
           modpath: '_include/js/twitter/',
           username: "Bluxart", // Change this with YOUR ID
@@ -330,13 +249,13 @@ BRUSHED.tweetFeed = function(){
 		setTimeout(function() {
 			ul.find('li:first').animate( {marginTop: valueTop + 'px'}, 500, 'linear', function() {
 				$(this).detach().appendTo(ul).removeAttr('style');
-			});	
+			});
 		  ticker();
 		}, 5000);
 	  };
 	  ticker();
 	});
-	
+
 }
 
 
@@ -363,7 +282,7 @@ BRUSHED.menu = function(){
 BRUSHED.goSection = function(){
 	$('#nextsection').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
-		
+
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 		return false;
 	});
@@ -376,7 +295,7 @@ BRUSHED.goSection = function(){
 BRUSHED.goUp = function(){
 	$('#goUp').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
-		
+
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 		return false;
 	});
@@ -420,22 +339,22 @@ BRUSHED.scrollToTop = function(){
 ================================================== */
 
 BRUSHED.utils = function(){
-	
+
 	$('.item-thumbs').bind('touchstart', function(){
 		$(".active").removeClass("active");
       	$(this).addClass('active');
     });
-	
+
 	$('.image-wrap').bind('touchstart', function(){
 		$(".active").removeClass("active");
       	$(this).addClass('active');
     });
-	
+
 	$('#social ul li').bind('touchstart', function(){
 		$(".active").removeClass("active");
       	$(this).addClass('active');
     });
-	
+
 }
 
 /* ==================================================
@@ -444,15 +363,15 @@ BRUSHED.utils = function(){
 
 BRUSHED.accordion = function(){
 	var accordion_trigger = $('.accordion-heading.accordionize');
-	
+
 	accordion_trigger.delegate('.accordion-toggle','click', function(event){
 		if($(this).hasClass('active')){
 			$(this).removeClass('active');
 		   	$(this).addClass('inactive');
 		}
 		else{
-		  	accordion_trigger.find('.active').addClass('inactive');          
-		  	accordion_trigger.find('.active').removeClass('active');   
+		  	accordion_trigger.find('.active').addClass('inactive');
+		  	accordion_trigger.find('.active').removeClass('active');
 		  	$(this).removeClass('inactive');
 		  	$(this).addClass('active');
 	 	}
@@ -466,7 +385,7 @@ BRUSHED.accordion = function(){
 
 BRUSHED.toggle = function(){
 	var accordion_trigger_toggle = $('.accordion-heading.togglize');
-	
+
 	accordion_trigger_toggle.delegate('.accordion-toggle','click', function(event){
 		if($(this).hasClass('active')){
 			$(this).removeClass('active');
@@ -484,7 +403,7 @@ BRUSHED.toggle = function(){
    Tooltip
 ================================================== */
 
-BRUSHED.toolTip = function(){ 
+BRUSHED.toolTip = function(){
     $('a[data-toggle=tooltip]').tooltip();
 }
 
@@ -499,7 +418,7 @@ $(document).ready(function(){
 	Modernizr.load([
 	{
 		test: Modernizr.placeholder,
-		nope: '_include/js/placeholder.js', 
+		nope: '_include/js/placeholder.js',
 		complete : function() {
 				if (!Modernizr.placeholder) {
 						Placeholders.init({
@@ -507,12 +426,12 @@ $(document).ready(function(){
 						hideOnFocus: false,
 						className: "yourClass",
 						textColor: "#999"
-						});    
+						});
 				}
 		}
 	}
 	]);
-	
+
 	// Preload the page with jPreLoader
 	$('body').jpreLoader({
 		splashID: "#jSplash",
@@ -523,7 +442,7 @@ $(document).ready(function(){
 			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
 		}
 	});
-	
+
 	BRUSHED.nav();
 	BRUSHED.mobileNav();
 	BRUSHED.listenerMenu();

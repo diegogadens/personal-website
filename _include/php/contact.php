@@ -7,22 +7,27 @@ header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
 
-$admin_email = 'diegogadens@gmail.com'; // Your Email
-$website_from_email = 'contato@diegogadens.com';
 $message_min_length = 1; // Min Message Length
 
+require_once('ses.php');
+$key = 'key';
+$secret = 'secret';
+$ses = new SimpleEmailService($key, $secret);
+
+
 	class Contact_Form{
-		function __construct($details, $email_admin, $website_from_email, $message_min_length, $phone_min_length){
+		function __construct($details, $message_min_length, $ses){
 
 			$this->name = stripslashes($details['name']);
 			$this->email = trim($details['email']);
-			$this->phone = $details['phone'];
-			$this->subject = 'Contato em diegogadens.com'; // Subject
+			if(isset($details['phone']))
+				$this->phone = $details['phone'];
+			else
+				$this->phone = 'telefone em branco...';
 			$this->message = stripslashes($details['message']);
 			$this->messageExtras = "";
-			$this->email_admin = $email_admin;
-			$this->website_from_email = $website_from_email;
 			$this->message_min_length = $message_min_length;
+			$this->ses = $ses;
 
 			$this->response_status = 1;
 			$this->response_html = '';
@@ -80,19 +85,27 @@ $message_min_length = 1; // Min Message Length
 
 		private function sendEmail(){
 
-			$from_add = "name@your-web-site.com";
+			$receiverEmail = 'diegogadens@gmail.com';
+			$subject = "Contato no site";
+			$from = "Contato no site <diegogadens@gmail.com>";
 
-			$mail = mail($this->email_admin, $this->subject, $this->message,
-				 "From: " . $this->website_from_email . "\r\n"
-				."Reply-To: ".$this->email."\r\n"
-				."X-Mailer: PHP/" . phpversion(). "\r\n"
-				."Return-Path: " . $this->website_from_email . "\r\n"
-				."Content-Type: text/html; charset=ISO-8859-1\r\n");
+			$m = new SimpleEmailServiceMessage();
+			$m->addTo($receiverEmail);
+			$m->setFrom($from);
+			$m->setSubject($subject);
+			$body = $this->message;
+			$plainTextBody = '';
+			$m->setMessageFromString($plainTextBody,$body);
 
-			if($mail)
-			{
+			$sentEmail = $this->ses->sendEmail($m);
+
+			if(is_array($sentEmail)) {
 				$this->response_status = 1;
 				$this->response_html = '<p>Muito obrigado. Entrarei em contato em breve.</p>';
+			}
+			else {
+				$this->response_status = 0;
+				$this->response_html = '<p>Erro ao enviar email. Se preferir, entre em contato diretamente pelo email diegogadens@gmail.com</p>';
 			}
 		}
 
@@ -113,7 +126,7 @@ $message_min_length = 1; // Min Message Length
 
 	}
 
-	$contact_form = new Contact_Form($_REQUEST, $admin_email, $website_from_email, $message_min_length, $phone_min_length);
+	$contact_form = new Contact_Form($_POST, $message_min_length, $ses);
 	$contact_form->sendRequest();
 
 ?>

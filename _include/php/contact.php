@@ -86,7 +86,7 @@ $ses = new SimpleEmailService($key, $secret);
 		private function sendEmail(){
 
 			$receiverEmail = 'diegogadens@gmail.com';
-			$subject = "Contato no site";
+			$subject = "Contato em diegogadens.com";
 			$from = "Contato no site <diegogadens@gmail.com>";
 
 			$m = new SimpleEmailServiceMessage();
